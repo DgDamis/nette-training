@@ -12,11 +12,11 @@ application:
 
 
 session:
-	expiration: 14 days
+	expiration: 3 hours
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=kalendar'
+	dsn: 'mysql:host=127.0.0.1;dbname=cestovka'
 	user: 'root'
 	password: ''
 	options:
@@ -25,11 +25,12 @@ database:
 
 services:
 	- App\Model\UserManager
+	- App\Model\NabidkaManager
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
 	router: App\Router\RouterFactory::createRouter
 
-latte.latteFactory:
-    setup:
-        - setTempDirectory(null)
+#latte.latteFactory:
+#    setup:
+#        - setTempDirectory(null)
