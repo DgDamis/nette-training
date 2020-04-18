@@ -31,7 +31,9 @@
 		"nette/utils": "^3.0",
 		"latte/latte": "^2.5",
 		"tracy/tracy": "^2.6",
-		"dg/adminer-custom": "^1.8"
+		"dg/adminer-custom": "^1.8",
+		"ublaboo/datagrid": "^6.2",
+		"radekdostal/nette-datetimepicker": "^3.0"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0",

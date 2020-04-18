@@ -6,5 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Ublaboo\\DataGrid\\' => array($vendorDir . '/ublaboo/datagrid/src'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
+    'Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
+    'Symfony\\Component\\Inflector\\' => array($vendorDir . '/symfony/inflector'),
     'PHPStan\\' => array($vendorDir . '/phpstan/phpstan-nette/src'),
+    'Contributte\\Application\\' => array($vendorDir . '/contributte/application/src'),
 );
