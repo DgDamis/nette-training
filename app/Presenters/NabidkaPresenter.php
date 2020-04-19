@@ -75,7 +75,7 @@ final class NabidkaPresenter extends BasePresenter {
                 ->setRequired(true);
 
         
-        $form->addText('cena', 'Cena: [Kč]')
+        $form->addInteger('cena', 'Cena: [Kč]')
 
                 ->setRequired(true);
 
@@ -84,7 +84,7 @@ final class NabidkaPresenter extends BasePresenter {
                 ->setHtmlType('date')
                 ->setRequired(true);
 
-        $form->addText('delka', 'Počet nocí:')
+        $form->addInteger('delka', 'Počet nocí:')
 
                 ->setRequired(true);
 
@@ -105,7 +105,7 @@ final class NabidkaPresenter extends BasePresenter {
 
     }
     
-    public function nabidkaFormSucceeded(UI\Form $form, \stdClass $values): void {
+    public function nabidkaFormSucceeded(UI\Form $form, $values): void {
         Debugger::barDump($values);
         $nabidkaId = $this->getParameter('id');
         Debugger::barDump($nabidkaId);
