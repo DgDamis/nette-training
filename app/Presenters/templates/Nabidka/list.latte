@@ -1,29 +1,38 @@
 {* Latte template *}
 
 {block content}
-<h2 class="text-center bg-secondary text-white p-3">Výpis nabídky</h2>
+<h2 class="text-left text-info p-3">Výpis nabídky</h2>
 <table class="table table-striped table-inverse">
     <thead class="thead-inverse">
         <tr>
             <th><a n:href="list 'destinace'">Destinace</a></th>
-            <th><a n:href="list 'datum DESC'">Den odjezdu</a></th>
-            <th><a n:href="list 'delka'">Počet nocí</a></th>
-            <th><a n:href="list 'cena DESC'">Cena</a></th>
+            <th><a n:href="list 'datum ASC'">Den odjezdu</a></th>
+            <th><a n:href="list 'delka ASC'">Počet nocí</a></th>
+            <th><a n:href="list 'cena ASC'">Cena</a></th>
         </tr>
     </thead>
     <tbody>
         {foreach $nabidkaList as $nabidka}
-        <tr>
-            <td scope="row"><a n:href="detail $nabidka->id">{$nabidka->destinace}</a></td>
-            <td>{$nabidka->datum|date:'j. n. Y'}</td>
-            <td class="text-center">{$nabidka->delka}</td>
-            <td>{$nabidka->cena} Kč</td>
-            <td class="text-center"><a n:href="Nabidka:update $nabidka->id" class="btn btn-success">Editovat</a> <a n:href="Nabidka:delete $nabidka->id" class="btn btn-danger">Smazat</a></td>
-        </tr>
+            <tr>
+                <td scope="row"><a n:href="detail $nabidka->id">{$nabidka->destinace}</a></td>
+                <td>{$nabidka->datum|date:'j. n. Y'}</td>
+                <td class="text-center">{$nabidka->delka}</td>
+                <td>{$nabidka->cena} Kč</td>
+                <td class="text-center"><a n:href="Nabidka:update $nabidka->id" class="btn btn-outline-dark"><svg class="bi bi-pencil" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-9 9a1 1 0 01-.39.242l-3 1a1 1 0 01-1.266-1.265l1-3a1 1 0 01.242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 00.5.5H4v.5a.5.5 0 00.5.5H5v.5a.5.5 0 00.5.5H6v-1.5a.5.5 0 00-.5-.5H5v-.5a.5.5 0 00-.5-.5H3z" clip-rule="evenodd"/>
+</svg> Upravit</a> <a n:href="Nabidka:delete $nabidka->id" class="btn btn-outline-dark"> <svg class="bi bi-x-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.146-3.146a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z" clip-rule="evenodd"/> 
+                        </svg> Smazat</a></td>
+            </tr>
         {/foreach}
     </tbody>
 </table>
-            <p><a n:href="Nabidka:insert" class="btn btn-primary">Nová nabídka</a></p>
+<p><a n:href="Nabidka:insert" class="btn btn-outline-dark"><svg class="bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M14 1H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2z" clip-rule="evenodd"/>
+</svg> Nová nabídka</a></p>
 {/block}
 
 {block scripts}

@@ -85,7 +85,7 @@ final class NabidkaPresenter extends BasePresenter {
                 ->setRequired(true);
 
         $form->addInteger('delka', 'Počet nocí:')
-
+                ->addRule(UI\Form::RANGE, 'Počet nocí musí být od 0 do 120', [0, 120])
                 ->setRequired(true);
 
         
