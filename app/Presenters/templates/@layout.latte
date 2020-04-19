@@ -1,47 +1,49 @@
 {**
  * @param string   $basePath web base path
  * @param array    $flashes  flash messages
- *}
+*}
 
 {import 'components/form.latte'}
 
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-	<title>{ifset title}{include title|stripHtml} | {/ifset}Cestovní kancelář</title>
+        <title>{ifset title}{include title|stripHtml} | {/ifset}Cestovní kancelář</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{$basePath}/css/style.css">
-	{block head}{/block}
-</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{$basePath}/css/style.css">
+        {block head}{/block}
+    </head>
 
-<body>
-	<header class="jumbotron-fluid p5 bg-primary text-white">
-		<h1 class="display-2 text-center">CE-100-VKA</h1>
-	</header>
-	<main>
-		<div class=container>
-			<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>
+    <body>
+        <header class="jumbotron-fluid p5 bg-primary text-white" >
+            <div class="container-fluid" style="height:350px;background-image:url({$basePath}/img/banner.jpg);background-position: 100% 100%;background-size: cover; ">
+                <h1 class="display-2 text-center" style="height: 400px; margin: 0 auto; padding-top: 100px">CE-100-VKA</h1>
+            </div>
+        </header>
+        <main>
+            <div class=container>
+                <div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>
 
-			{include content}
-		</div>
-	</main>
-	<footer class="p-5 bg-secondary">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6"><img src="{$basePath}/img/skola-logo.png" alt="Logo školy" class="img-fluid"></div>
-				<div class="col-sm-6">&copy; 2020, Adam Šmehýl, někde v Háji</div>
-			</div>
-		</div>
-	</footer>
-	{block scripts}
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
-	<script src="{$basePath}/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-	{/block}
-</body>
+                {include content}
+            </div>
+        </main>
+        <footer class="p-5 bg-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6"><img src="{$basePath}/img/skola-logo.png" alt="Logo školy" class="img-fluid"></div>
+                    <div class="col-sm-6">&copy; 2020, Adam Šmehýl, někde v Háji</div>
+                </div>
+            </div>
+        </footer>
+        {block scripts}
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+        <script src="{$basePath}/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{$basePath}/js/main.js"></script>
+        {/block}
+    </body>
 </html>
