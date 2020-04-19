@@ -1,7 +1,17 @@
 {* Latte template *}
 
 {block content}
-<h2 class="text-center">Detail nabídky</h2>
+<div class="container">
+<h2 class="text color-blue">{$nabidka->destinace}</h2>
+<p>Datum odjezdu: <b>{$nabidka->datum|date:'j. n. Y'}</b>,  doprava: <b>{$nabidka->doprava}</b></p>
+<p>Délka pobytu: <b>{$nabidka->delka} nocí</b>, cena: <b>{$nabidka->cena} Kč</b></p>
+<hr>
+<h4>Popis</h4>
+{$nabidka->popis}
+<hr>
+<a n:href="list 'datum ASC'">Zpět na nabídku zájezdů</a>
+<hr>
+</div>
 {/block}
 
 {block scripts}
