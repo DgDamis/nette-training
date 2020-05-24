@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88849dd36eae05652f3c7732d8545c69",
+    "content-hash": "13b6c6ce23c8807870345af6fd3b65f7",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -1318,6 +1318,49 @@
             "time": "2020-02-09T14:10:55+00:00"
         },
         {
+            "name": "radekdostal/nette-datetimepicker",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/radekdostal/Nette-DateTimePicker.git",
+                "reference": "cbd2a267b7692639e828008e852410eb8bb36025"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/radekdostal/Nette-DateTimePicker/zipball/cbd2a267b7692639e828008e852410eb8bb36025",
+                "reference": "cbd2a267b7692639e828008e852410eb8bb36025",
+                "shasum": ""
+            },
+            "require": {
+                "nette/di": "^3.0",
+                "nette/forms": "^3.0",
+                "nette/utils": "^3.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "tracy/tracy": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1",
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Radek Dostál",
+                    "email": "radek.dostal@gmail.com"
+                }
+            ],
+            "description": "DatePicker and DateTimePicker input controls for Nette Framework",
+            "time": "2019-04-04T05:35:39+00:00"
+        },
+        {
             "name": "tracy/tracy",
             "version": "v2.7.5",
             "source": {
@@ -1499,6 +1542,20 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-05-10T20:36:16+00:00"
         },
         {
@@ -1574,5 +1631,6 @@
     "platform": {
         "php": ">=7.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

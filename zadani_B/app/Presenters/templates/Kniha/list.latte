@@ -1,0 +1,26 @@
+{* Latte template *}
+
+{block content}
+
+<table>
+    <thead><tr>
+            <th> <a n:href="list 'title'">Název díla</a></th>
+    <th> <a n:href="list 'author'">Autor</a></th>
+    <th> <a n:href="list 'year'">Rok vzniku</a></th>
+    <th> <a n:href="list 'category'">Literární druh</a></th>
+    <th> Akce</th>
+    
+        </tr>
+    </thead>
+    <tbody>
+        {foreach knihaList as kniha}
+        <tr>
+    <td>{$kniha->title}</td>
+    <td>{$kniha->author}</td>
+    <td>{$kniha->year}</td>
+    <td>{$kniha->category}</td>
+    </tr>
+    {/foreach}
+    </tbody>
+
+</table>

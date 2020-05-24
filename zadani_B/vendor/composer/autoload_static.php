@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit558bcd066e719d89a819c05496ddb31e
+class ComposerStaticInit4ceccbb21e9886b2b4a952198e4038ba
 {
     public static $files = array (
         '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
@@ -381,6 +381,15 @@ class ComposerStaticInit558bcd066e719d89a819c05496ddb31e
         'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
         'Nette\\Utils\\UnknownImageFileException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Validators' => __DIR__ . '/..' . '/nette/utils/src/Utils/Validators.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\AbstractDateTimePicker' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/AbstractDateTimePicker.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\DatePicker' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/DatePicker/DatePicker.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\DatePicker\\DI\\DatePickerExtension' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/DatePicker/DI/DatePickerExtension.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\DateTimePicker' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/DateTimePicker/DateTimePicker.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\DateTimePicker\\DI\\DateTimePickerExtension' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/DateTimePicker/DI/DateTimePickerExtension.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\TbDatePicker' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/TbDatePicker/TbDatePicker.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\TbDatePicker\\DI\\TbDatePickerExtension' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/TbDatePicker/DI/TbDatePickerExtension.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\TbDateTimePicker' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/TbDateTimePicker/TbDateTimePicker.php',
+        'RadekDostal\\NetteComponents\\DateTimePicker\\TbDateTimePicker\\DI\\TbDateTimePickerExtension' => __DIR__ . '/..' . '/radekdostal/nette-datetimepicker/src/TbDateTimePicker/DI/TbDateTimePickerExtension.php',
         'Tester\\Assert' => __DIR__ . '/..' . '/nette/tester/src/Framework/Assert.php',
         'Tester\\AssertException' => __DIR__ . '/..' . '/nette/tester/src/Framework/AssertException.php',
         'Tester\\CodeCoverage\\Collector' => __DIR__ . '/..' . '/nette/tester/src/CodeCoverage/Collector.php',
@@ -431,9 +440,9 @@ class ComposerStaticInit558bcd066e719d89a819c05496ddb31e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit558bcd066e719d89a819c05496ddb31e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit558bcd066e719d89a819c05496ddb31e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit558bcd066e719d89a819c05496ddb31e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4ceccbb21e9886b2b4a952198e4038ba::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4ceccbb21e9886b2b4a952198e4038ba::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit4ceccbb21e9886b2b4a952198e4038ba::$classMap;
 
         }, null, ClassLoader::class);
     }

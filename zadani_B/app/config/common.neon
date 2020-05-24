@@ -12,19 +12,20 @@ application:
 
 
 session:
-	expiration: 14 days
+	expiration: 5 minutes
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=127.0.0.1;dbname=literatura'
+	user: root
+	password: ''
 	options:
 		lazy: yes
 
 
 services:
 	- App\Model\UserManager
+	- App\Model\KnihaManager
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
