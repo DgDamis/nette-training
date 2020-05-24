@@ -21,7 +21,7 @@ final class KnihaPresenter extends BasePresenter
 		$this->template->anyVariable = 'any value';
 	}
         
-        public function renderList($order): void{
+        public function renderList($order = 'title'): void{
             $this->template->knihaList = $this->knihaManager->getAll($order);
         }
         

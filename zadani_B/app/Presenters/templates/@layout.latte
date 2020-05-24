@@ -13,21 +13,21 @@
         <title>{ifset title}{include title|stripHtml} | {/ifset}Nette Sandbox</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap.min.css"
+        <link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap.min.css">
               <link rel="stylesheet" href="{$basePath}/css/style.css">
         {block head}{/block}
     </head>
 
     <body>
-        <header class="jumbotron-fluid text-white bg-danger p5">
+         <header class="jumbotron-fluid text-white bg-danger p5">
             <div class="container">
                 <br>
                 <h1 class="display-2 text-center">LITERATURA</h1>
                 <h3 class="text-center text-yellow">DÍLA A JEJICH AUTOŘI</h2>
                     <br>
-                    </header>
+                    
                     </div>
+            </header>
                     <main>
                         <div class=container>
                             <div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>

@@ -17,8 +17,8 @@ session:
 
 database:
 	dsn: 'mysql:host=127.0.0.1;dbname=literatura'
-	user: root
-	password: ''
+	user: 'nette'
+	password: 'nette-admin'
 	options:
 		lazy: yes
 

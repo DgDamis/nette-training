@@ -1,8 +1,8 @@
 {* Latte template *}
 
 {block content}
-
-<table>
+<div class="container">
+<table class="table table-striped">
     <thead><tr>
             <th> <a n:href="list 'title'">Název díla</a></th>
     <th> <a n:href="list 'author'">Autor</a></th>
@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        {foreach knihaList as kniha}
+        {foreach $knihaList as $kniha}
         <tr>
     <td>{$kniha->title}</td>
     <td>{$kniha->author}</td>
@@ -22,5 +22,7 @@
     </tr>
     {/foreach}
     </tbody>
+   
 
 </table>
+</div>

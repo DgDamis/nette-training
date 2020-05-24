@@ -13,9 +13,7 @@ final class KnihaManager {
 
     use Nette\SmartObject;
 
-    private
-
-    const
+    private const
             TABLE_NAME = 'item',
             COLUMN_ID = 'id',
             COLUMN_TITLE = 'title',
@@ -32,7 +30,7 @@ final class KnihaManager {
         $this->database = $database;
     }
 
-    public function getAll($order = self::COLUMN_TITLE) {
+    public function getAll($order) {
         return $this->database->table(self::TABLE_NAME)->order($order)->fetchAll();
     }
 
