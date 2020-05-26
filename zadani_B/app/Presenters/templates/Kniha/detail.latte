@@ -1,3 +1,16 @@
 {* Latte template *}
 
 {block content}
+<div>
+    <br>
+<h3 class="text-center text-dark">{$kniha->author}</h3>
+<br>
+<h2 class="text-center text-danger">{$kniha->title}</h3>
+<br>
+<p class="">{$kniha->anotation}</p>
+<hr>
+<p class="text-center">Literární druh: {$kniha->category|upper} | Rok vzniku: {$kniha->year}</p>
+<p class="text-center">Hodnocení: 
+    {for $init = 0; $init < $kniha->stars ; $init++}<span class="fa fa-star"></span>{/for}</p>
+<a n:href="list">Zpět na úvodní stránku</a>
+</div>

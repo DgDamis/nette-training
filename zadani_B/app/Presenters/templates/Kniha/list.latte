@@ -2,27 +2,27 @@
 
 {block content}
 <div class="container">
-<table class="table table-striped">
-    <thead><tr>
-            <th> <a n:href="list 'title'">Název díla</a></th>
-    <th> <a n:href="list 'author'">Autor</a></th>
-    <th> <a n:href="list 'year'">Rok vzniku</a></th>
-    <th> <a n:href="list 'category'">Literární druh</a></th>
-    <th> Akce</th>
-    
-        </tr>
-    </thead>
-    <tbody>
-        {foreach $knihaList as $kniha}
-        <tr>
-    <td>{$kniha->title}</td>
-    <td>{$kniha->author}</td>
-    <td>{$kniha->year}</td>
-    <td>{$kniha->category}</td>
-    </tr>
-    {/foreach}
-    </tbody>
-   
+    <table class="table table-striped">
+        <thead><tr>
+                <th> <a n:href="list 'title ASC'">Název díla</a></th>
+                <th> <a n:href="list 'author ASC'">Autor</a></th>
+                <th> <a n:href="list 'year DESC' ">Rok vzniku</a></th>
+                <th> <a n:href="list 'category ASC'">Literární druh</a></th>
+                <th> Akce</th>
 
-</table>
+            </tr>
+        </thead>
+        <tbody>
+            {foreach $knihaList as $kniha}
+                <tr>
+                    <td><a n:href="detail $kniha->id">{$kniha->title}</a></td>
+                    <td>{$kniha->author}</td>
+                    <td>{$kniha->year}</td>
+                    <td>{$kniha->category}</td>
+                    <td><a class="btn btn-outline-dark text-dark" n:href="update $kniha->id">Editace</a> <a class="btn btn-danger" n:href="delete $kniha->id">Odstranění</a></td>
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
+        <a class="btn btn-info" n:href="insert">Nové dílo</a>
 </div>
