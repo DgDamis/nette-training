@@ -1,0 +1,20 @@
+{* Latte template *}
+
+{block content}
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+        <h2>{$akce->summary}</h2>
+        <p>{$akce->description}</p>
+        <hr>
+        <ul>
+            <li>Typ akce: <b>{$akce->type}</b></li>
+  <li>konání akce: <b>{$akce->date|date:'%d. %m. %Y'} {$akce->time|date:'%h:%I'} hod.</b></li>
+  <li>počet účastníků: <b>{$akce->visitors}</b></li>
+</ul>
+    </div>
+    <div class="col-sm-6"> <img src="{$basePath}/mapa.jpg" class="img img-thumbnail"> Orientační plán ZOO Praha</div>
+    </div>
+</div>
+    <a n:href="list">Zpět</a>
+    <br>

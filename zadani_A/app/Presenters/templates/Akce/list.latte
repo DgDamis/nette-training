@@ -1,0 +1,28 @@
+{* Latte template *}
+
+{block content}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a n:href="list 'summary ASC'">Název akce</a></th>
+            <th><a n:href="list 'date ASC'">Konání</a></th>
+            <th><a n:href="list 'type ASC'">Typ Akce</a></th>
+            <th><a n:href="list 'visitors DESC'">Počet návštěvníků</a></th>
+            <th>Operace</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            {foreach $seznamAkci as $akce}
+                <tr>
+                <td><a n:href="detail $akce->id">{$akce->summary}</a></td>
+                 <td>{$akce->date|date:'%d. %m. %Y'} {$akce->time|date:'%h:%I'}</td>
+                  <td>{$akce->type}</td>
+                   <td>{$akce->visitors}</td>
+                   <td><a class="btn btn-info" n:href="list">Změnit</a> <a class="btn btn-danger" n:href="delete $akce->id">Vymazat</a></td>
+                    </tr>
+            {/foreach}
+        
+    </tbody>
+</table>
+
